@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Add</title>
+</head>
+<body>
+    <div class="content">
+        <h1>NEW ARTICLE</h1>
+        <form action="/admin/add" method="post">
+            <label for="">Enter the title of the Post</label><br>
+            <input type="text" name="title" placeholder="Enter Post Title" required><br>
+            <label for="">Enter the Header of the Post</label><br>
+            <input type="text" name="header" placeholder="Enter Post Header" required><br>
+            <label for="">Enter the Body of the Post</label><br>
+            <textarea name="body" id="body" placeholder="Enter Post Body" required></textarea><br> <br>
+            <button type="submit">Publish</button>
+        </form>
+    </div>
+</body>
+</html>

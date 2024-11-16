@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style2.css')}}">
+    <title>User View</title>
+</head>
+<body>
+    <section>
+        <header><h1>{{peptits.title}} </h1></header><br>
+        <h2>{{peptits.header}}</h2> <br>
+        <h3>{{peptits.date_created}}</h3>
+        <main>
+            <article>
+                <p>{{peptits.body}}</p>
+            </article>
+        </main>
+    </section>
+</body>
+</html>

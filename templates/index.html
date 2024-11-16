@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>BLOG: Homepage</title>
+</head>
+<body>
+    <header><h1>Welcome</h1></header>
+    <div class="container">
+        <section class="blog-section">
+            <div class="blog-card">
+                {% for post in posts%}
+                <h1><a href="/view/{{post.id}}">{{post.title}}</a></h1>
+                <p class="blog-overview">{{post.header}}</p>
+                <a href="/view/{{post.id}}" class="btn dark">read</a><br><br>
+                <h6>{{post.date_created}}</h6> <br> <br>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</body>
+</html>
